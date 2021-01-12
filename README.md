@@ -31,7 +31,7 @@ TypeScript/ESLint/Prettier を個別に設定されたい方は以下ファイ�
 
 ソースコードの import 文は `src` ディレクトリからの絶対パスで記述出来るように設定していますので、詳細はこちらの記事を参照ください。
 
-<iframe class="hatenablogcard" style="width:100%;height:155px;margin:15px 0;max-width:680px;" title="Reactのimport文を絶対パスで設定する(TypeScript版) | ZUMA Lab" src="https://hatenablog-parts.com/embed?url=https://zuma-lab.com/posts/typescript-import-absolute-path-settings" frameborder="0" scrolling="no"></iframe>
+[React の import 文を絶対パスで設定する(TypeScript 版) ](https://zuma-lab.com/posts/typescript-import-absolute-path-settings)
 
 ## 自作テンプレート作成手順
 
@@ -76,19 +76,19 @@ cd next-ts-lint-mui-template && mkdir src && mv components interfaces pages util
 
 こちらに詳しい設定方法の記事を書きましたので参照ください。
 
-<iframe class="hatenablogcard" style="width:100%;height:155px;margin:15px 0;max-width:680px;" title="Reactのimport文を絶対パスで設定する(TypeScript版) | ZUMA Lab" src="https://hatenablog-parts.com/embed?url=https://zuma-lab.com/posts/typescript-import-absolute-path-settings" frameborder="0" scrolling="no"></iframe>
+[React の import 文を絶対パスで設定する(TypeScript 版)](https://zuma-lab.com/posts/typescript-import-absolute-path-settings)
 
 ## ESLint/Prettier を設定をする
 
 こちらに詳しい設定方法の記事を書きましたので参照ください。
 
-<iframe class="hatenablogcard" style="width:100%;height:155px;margin:15px 0;max-width:680px;" title="TypeScriptのプロジェクトにESLintとPrettierを併用してVSCodeの保存時に自動フォーマットをする | ZUMA Lab" src="https://hatenablog-parts.com/embed?url=https://zuma-lab.com/posts/eslint-prettier-settings" frameborder="0" scrolling="no"></iframe>
+[TypeScript のプロジェクトに ESLint と Prettier を併用して VSCode の保存時に自動フォーマットをする](https://zuma-lab.com/posts/eslint-prettier-settings)
 
 ## Material-UI を設定する
 
 こちらに詳しい設定方法の記事を書きましたので参照ください。
 
-<iframe class="hatenablogcard" style="width:100%;height:155px;margin:15px 0;max-width:680px;" title="Next.js/TypeScriptプロジェクトにMaterial-UI/styled-componentsを対応させる | ZUMA Lab" src="https://hatenablog-parts.com/embed?url=https://zuma-lab.com/posts/next-material-ui-styled-components-settings" frameborder="0" scrolling="no"></iframe>
+[Next.js/TypeScript プロジェクトに Material-UI/styled-components を対応させる](https://zuma-lab.com/posts/next-material-ui-styled-components-settings)
 
 ## Github に作成したテンプレートを push する
 
