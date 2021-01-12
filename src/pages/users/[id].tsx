@@ -1,32 +1,28 @@
-import { GetStaticProps, GetStaticPaths } from "next";
+import { GetStaticProps, GetStaticPaths } from 'next';
 
-import { User } from "interfaces";
-import { sampleUserData } from "utils/sample-data";
-import Layout from "components/Layout";
-import ListDetail from "components/ListDetail";
+import { User } from 'interfaces';
+import { sampleUserData } from 'utils/sample-data';
+import Layout from 'components/Layout';
+import ListDetail from 'components/ListDetail';
 
 type Props = {
   item?: User;
   errors?: string;
 };
 
-const StaticPropsDetail = ({ item, errors }: Props) => {
+const StaticPropsDetail: React.FC<Props> = ({ item, errors }: Props) => {
   if (errors) {
     return (
-      <Layout title="Error | Next.js + TypeScript Example">
+      <Layout title='Error | Next.js + TypeScript Example'>
         <p>
-          <span style={{ color: "red" }}>Error:</span> {errors}
+          <span style={{ color: 'red' }}>Error:</span> {errors}
         </p>
       </Layout>
     );
   }
 
   return (
-    <Layout
-      title={`${
-        item ? item.name : "User Detail"
-      } | Next.js + TypeScript Example`}
-    >
+    <Layout title={`${item ? item.name : 'User Detail'} | Next.js + TypeScript Example`}>
       {item && <ListDetail item={item} />}
     </Layout>
   );
@@ -42,7 +38,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
-  return { paths, fallback: false };
+  return Promise.resolve({ paths, fallback: false });
 };
 
 // This function gets called at build time on server-side.
@@ -54,8 +50,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const item = sampleUserData.find((data) => data.id === Number(id));
     // By returning { props: item }, the StaticPropsDetail component
     // will receive `item` as a prop at build time
-    return { props: { item } };
+    return Promise.resolve({ props: { item } });
   } catch (err) {
-    return { props: { errors: err.message } };
+    const error = err as Error;
+    return { props: { errors: error.message } };
   }
 };
