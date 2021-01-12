@@ -1,41 +1,111 @@
-# TypeScript Next.js example
+# About Next.js/TypeScript/ESLint/Prettier/Material-UI/styled-components Template.
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+Next.js の TypeScript/ESLint/Prettier/Material-UI/styled-components のテンプレートです。
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
-
-## How to use it?
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
+テンプレートは以下のコマンドでどなたでもご利用可能です。
 
 ```
-npm install --save-dev typescript
+yarn create next-app --example "https://github.com/kazuma-fujita/next-ts-lint-mui-template" sample-app
 ```
 
-To enable TypeScript's features, we install the type declarations for React and Node.
+テンプレートには以下 package が含まれます。
+
+- Next
+- React
+- TypeScript
+- EsLint
+- Prettier
+- Material-UI
+- styled-components
+
+TypeScript/ESLint/Prettier を個別に設定されたい方は以下ファイルをそれぞれ調整してください。
+
+- TypeScript
+  - `tsconfig.json`
+- Prettier
+  - `.prettierrc.json`
+- ESlint
+  - `.eslintrc.json`
+
+また、テンプレートに含まれるサンプルのソースコードはデフォルトで `src` ディレクトリ配下にあります。
+
+ソースコードの import 文は `src` ディレクトリからの絶対パスで記述出来るように設定していますので、詳細はこちらの記事を参照ください。
+
+<iframe class="hatenablogcard" style="width:100%;height:155px;margin:15px 0;max-width:680px;" title="Reactのimport文を絶対パスで設定する(TypeScript版) | ZUMA Lab" src="https://hatenablog-parts.com/embed?url=https://zuma-lab.com/posts/typescript-import-absolute-path-settings" frameborder="0" scrolling="no"></iframe>
+
+## 自作テンプレート作成手順
+
+ここからは自作テンプレートを作成した時の作業手順です。
+
+備忘録として残しておきます。
+
+### 環境
+
+- macOS Catalina 10.15.5(19F101)
+- VSCode 1.52.1
+- Next 10.0.5
+- React 16.14.0
+- TypeScript 4.0.5
+- yarn 1.22.4
+
+## テンプレートを作成する
+
+`yarn create next-app` で今回公開する `next-ts-lint-mui-template` という名前の雛形を作成します。
+
+今回はあらかじめ TypeScript が設定された `with-typescript` テンプレートを流用します。
 
 ```
-npm install --save-dev @types/react @types/react-dom @types/node
+yarn create next-app --example with-typescript next-ts-lint-mui-template
 ```
 
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
+雛形が作成されたら、 `yarn dev` でアプリケーションを起動し、 [http://localhost:3000](http://localhost:3000) を開いて Next の初期画面が表示されることを確認します。
 
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
+## src ディレクトリの作成
 
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+`create next-app` した初期状態では `src` ディレクトリがありません。
+
+`src` ディレクトリを作成して他の階層を `src` ディレクトリに移動します。
+
+この作業は好みですが、CRA で開発をする時は基本プロダクトソースコードを `src` ディレクトリ配下に置くので、慣例として実行します。
+
+```
+cd next-ts-lint-mui-template && mkdir src && mv components interfaces pages utils src/.
+```
+
+## import 文を src ディレクトリからの絶対パスに設定する
+
+こちらに詳しい設定方法の記事を書きましたので参照ください。
+
+<iframe class="hatenablogcard" style="width:100%;height:155px;margin:15px 0;max-width:680px;" title="Reactのimport文を絶対パスで設定する(TypeScript版) | ZUMA Lab" src="https://hatenablog-parts.com/embed?url=https://zuma-lab.com/posts/typescript-import-absolute-path-settings" frameborder="0" scrolling="no"></iframe>
+
+## ESLint/Prettier を設定をする
+
+こちらに詳しい設定方法の記事を書きましたので参照ください。
+
+<iframe class="hatenablogcard" style="width:100%;height:155px;margin:15px 0;max-width:680px;" title="TypeScriptのプロジェクトにESLintとPrettierを併用してVSCodeの保存時に自動フォーマットをする | ZUMA Lab" src="https://hatenablog-parts.com/embed?url=https://zuma-lab.com/posts/eslint-prettier-settings" frameborder="0" scrolling="no"></iframe>
+
+## Material-UI を設定する
+
+こちらに詳しい設定方法の記事を書きましたので参照ください。
+
+<iframe class="hatenablogcard" style="width:100%;height:155px;margin:15px 0;max-width:680px;" title="Next.js/TypeScriptプロジェクトにMaterial-UI/styled-componentsを対応させる | ZUMA Lab" src="https://hatenablog-parts.com/embed?url=https://zuma-lab.com/posts/next-material-ui-styled-components-settings" frameborder="0" scrolling="no"></iframe>
+
+## Github に作成したテンプレートを push する
+
+Github に public repository を作成します。
+
+今回は `next-ts-lint-mui-template` という名前にしました。
+
+ローカルリポジトリに リモートリポジトリを追加します。
+
+```
+git remote add origin git@github.com.zuma:kazuma-fujita/next-ts-lint-mui-template.git
+```
+
+通常は `git flow init` などで develop ブランチを作成し、main ブランチ read-only にしますが、今回は割愛して直接 main に push します。
+
+```
+git push origin main
+```
+
+Github の public repository に置くだけでテンプレートの公開は完了です。
