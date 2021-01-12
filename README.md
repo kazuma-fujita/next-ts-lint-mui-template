@@ -1,6 +1,6 @@
 # About Next.js/TypeScript/ESLint/Prettier/Material-UI/styled-components Template.
 
-Next.js の TypeScript/ESLint/Prettier/Material-UI/styled-components のテンプレートです。
+Next.js/TypeScript/ESLint/Prettier/Material-UI/styled-components の自作テンプレートを作りました。
 
 テンプレートは以下のコマンドでどなたでもご利用可能です。
 
@@ -84,7 +84,7 @@ cd next-ts-lint-mui-template && mkdir src && mv components interfaces pages util
 
 [TypeScript のプロジェクトに ESLint と Prettier を併用して VSCode の保存時に自動フォーマットをする](https://zuma-lab.com/posts/eslint-prettier-settings)
 
-## Material-UI を設定する
+## Material-UI/styled-components を設定する
 
 こちらに詳しい設定方法の記事を書きましたので参照ください。
 
