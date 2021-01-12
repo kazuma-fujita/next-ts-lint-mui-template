@@ -16,7 +16,8 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "baseUrl": "src" // 追加。import文をsrcからの絶対パスで記述出来る
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx"]
